@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+
+.container3 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+
+.container3 .box {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    color: #0ad815;
+    background: #2f3035;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+    transition: 0.5s;
+}
+
+.container3 .box:hover {
+    transform: translateY(-20px);
+}
+
+.container3 .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #b406a6, #7509da);
+}
+
+.container3 .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #370ad8, #012002);
+    filter: blur(30px);
+}
+
+.container3 .box:nth-child(2)::before,
+.container3 .box:nth-child(2)::after {
+    background: linear-gradient(315deg, #0a7bd8, #030b50);
+}
+
+.container3 .box:nth-child(3)::before,
+.container3 .box:nth-child(3)::after {
+    background: linear-gradient(315deg, #8a0303, #ec510988);
+}
+
+.container3 .box span {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.container3 .box span::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.container3 .box .content {
+    position: relative;
+    z-index: 10;
+    padding: 20px 40px;
+}
+
+.container3 .box .content h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.container3 .box .content p {
+    font-size: 1.1em;
+    color: 0ad815;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+}
+
+.container3 .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: rgb(83, 45, 45);
+    background: rgb(155, 152, 152);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 700;
+}
